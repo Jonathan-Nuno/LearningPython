@@ -26,7 +26,7 @@ print(f"Your total is ${total}")
 def calculate_tip(total, percentage):
     return total * (percentage/100)
 
-tip = calculate_tip(total, 15)
+tip = calculate_tip(total, 20)
 
 if tip >= 10:
     print("YOU ARE VERY GENEROUS")
@@ -38,3 +38,4 @@ else:
 print(tip)
 
 ## Conditions
+##changes to code
