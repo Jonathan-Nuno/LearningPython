@@ -63,21 +63,23 @@ account_checking.transfer(account_saving, 50)
 print(account_checking.balance)
 print(account_saving.balance)
 
-# def upgrade_to_manager(em):
-#     em.is_manager = True
+employees = []
 
-# class Employee:
-#     def __init__(self, name):
-#         self.name = name
-#         self.is_manager = False
+def upgrade_to_manager(em):
+    em.is_manager = True
 
-# employee = Employee("John Doe")
-# employees.append(employee)
-# employee.name = "Mary Doe"
+class Employee:
+    def __init__(self, name):
+        self.name = name
+        self.is_manager = False
 
-# print(employees[0].name)
+employee = Employee("John Doe")
+employees.append(employee)
+employee.name = "Mary Doe"
 
+print(employees[0].name)
 
-# print(employee.is_manager)
-# upgrade_to_manager(employee)
-# print(employee.is_manager)
+print(employee.is_manager)
+upgrade_to_manager(employee)
+print(employee.is_manager)
+
