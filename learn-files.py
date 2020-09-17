@@ -62,23 +62,40 @@
 #     content = file_object.read()
 #     print(content)
 
-def remover(dupe):
-    return list(dict.fromkeys(dupe))
+# def remover(dupe):
+#     return list(dict.fromkeys(dupe))
 
-with open("emails.txt") as file_object:
-    content = file_object.read()
+# with open("emails.txt") as file_object:
+#     content = file_object.read()
 
-duplicate = content.split(",")
-emails = []
+# duplicate = content.split(",")
+# emails = []
 
-for email in duplicate:
-    email = email.strip() #to remove \n
-    if email not in emails:
-        emails.append(email)
+# for email in duplicate:
+#     email = email.strip() #to remove \n
+#     if email not in emails:
+#         emails.append(email)
 
-a = ["a", "b", "c"]
+# a = ["a", "b", "c"]
 
-result = ",".join(emails)
+# result = ",".join(emails)
 
-with open("duplicate_free_emails.txt", "w") as file_object:
-    file_object.writelines(result)
+# with open("duplicate_free_emails.txt", "w") as file_object:
+#     file_object.writelines(result)
+
+### The below write to file command would be good to use when logging input information ***Please note you can run in while loop***
+
+while True:
+
+    task = input("Enter task name: ")
+    if task == "q":
+        break
+    prio = input("Enter priority: ")
+
+    with open("todo.txt", "a") as object_input:
+        object_input.write(f"TASK: {task}, PRIORITY: {prio}\n")
+
+    with open("todo.txt") as file_object:
+        content = file_object.read()
+
+    print(content)
